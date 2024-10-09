@@ -1,11 +1,11 @@
+
 document.addEventListener("DOMContentLoaded", function () {
-    const h = document.getElementById("height").value
-    const w = document.getElementById("weight").value
+    const h = document.getElementById("height")
+    const w = document.getElementById("weight")
     const b = document.getElementById("btn")
     const o = document.getElementById("output")
-
     b.addEventListener("click", function () {
-        let imt = +w / (+h/100 * +h/100)
+        let imt = (Number(w.value) / (Number(h.value)/100 * Number(h.value)/100))
         o.innerHTML = imt.toFixed(3).toString()
     })
 
